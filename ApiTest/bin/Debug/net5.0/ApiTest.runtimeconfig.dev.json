@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\cruzj\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\cruzj\\.nuget\\packages"
+    ]
+  }
+}
