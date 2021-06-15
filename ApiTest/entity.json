@@ -1,0 +1,502 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "d482d9b2-6676-4b04-9fb3-2887fc4372f6",
+        "name": "backend"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Scenario",
+            "description": "",
+            "id": "467cec0c-5464-42a7-8d38-7b76a48beeae",
+            "name": "TEST"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": ""
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:44388",
+                  "path": "/api/Students"
+                },
+                "id": "4b9185bf-37a6-4a6e-acf1-1fe789ca9abc",
+                "name": "STUDENT/GET",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n        \"id\": 1,\n        \"name\": \"John\",\n        \"dateBirth\": \"2021-06-09T21:55:32.73\",\n        \"assigments\": [\n             {\n                \"id\": 2,\n                \"name\": \"Assigment 1\",\n                \"students\": []\n            },\n            {\n                \"id\": 11,\n                \"name\": \"Assigment 6\",\n                \"students\": []\n            }\n        ]\n    }"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:44388",
+                  "path": "/api/Students"
+                },
+                "id": "163a84f0-739f-44db-9fc6-c2d3c9b960dd",
+                "name": "STUDENT/POST",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:44388",
+                  "path": "/api/Students/5"
+                },
+                "id": "b4755834-9511-4c1e-87b7-3241aba9afe0",
+                "name": "STUDENT/GET/{ID}",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+                  "name": "PUT"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n\"id\": 1,\n\"name\": \"John Cena\",\n\"dateBirth\": \"2021-06-09T21:55:32.73\",\n\"assigments\":[]\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:44388",
+                  "path": "/api/Students/1"
+                },
+                "id": "482ff0cf-125c-4b5e-af48-5faaa0e978ba",
+                "name": "STUDENT/PUT/{ID}",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+                  "name": "DELETE"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:44388",
+                  "path": "/api/Students/6"
+                },
+                "id": "627cd8b7-9767-4fbd-852f-6bd2aaabf8f7",
+                "name": "STUDENT/DELETE/{1}",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:44388",
+                  "path": "/api/Assigments"
+                },
+                "id": "1254f772-99d0-4048-8107-dc45189397a4",
+                "name": "ASSIGMENT/GET",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n        \"id\": 1,\n        \"name\": \"Assigment 1\",\n        \"students\": [\n            {\n                \"id\": 1,\n                \"name\": \"John\",\n                \"dateBirth\": \"2021-06-09T21:55:32.73\",\n                \"assigments\": []\n            }\n        ]\n    }"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:44388",
+                  "path": "/api/Assigments"
+                },
+                "id": "35333b81-1a43-4cb3-82b1-2682e7a6ee09",
+                "name": "ASSIGMENT/POST",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:44388",
+                  "path": "/api/Assigments/1"
+                },
+                "id": "ebfbbbf2-8065-4ae1-8d41-f6bdede0d213",
+                "name": "ASSIGMENT/GET/{ID}",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+                  "name": "PUT"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{ \n\"id\": 11,\n\"name\": \"Assigment 1 change\",\n\"students\": []\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:44388",
+                  "path": "/api/Assigments/11"
+                },
+                "id": "c6e714a7-9e27-4984-a5d1-e618eddfda3d",
+                "name": "ASSIGMENT/PUT/{ID}",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+                  "name": "DELETE"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:44388",
+                  "path": "/api/Assigments/2"
+                },
+                "id": "03aacc36-27aa-4d5c-8ee7-86e4fcb2fbea",
+                "name": "STUDENT/DELETE/{ID}",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+                  "name": "PUT"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n        \"id\": 1,\n        \"name\": \"John\",\n        \"dateBirth\": \"2021-06-09T21:55:32.73\",\n        \"students\": [\n            {\n                \"id\": 1,\n                \"name\": \"John\",\n                \"dateBirth\": \"2021-06-09T21:55:32.73\",\n                \"assigments\": []\n            },\n          {\n                \"id\": 2,\n                \"name\": \"John\",\n                \"dateBirth\": \"2021-06-09T21:55:32.73\",\n                \"assigments\": []\n            }\n        ]\n    }"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:44388",
+                  "path": "/api/ManageAssigment/1/Students"
+                },
+                "id": "914a31a9-250a-4f2c-a504-33ae9b2c2179",
+                "name": "MANAGEASSIGMENT/{ID}/STUDENTS",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+                  "name": "PUT"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n        \"id\": 5,\n        \"name\": \"John\",\n        \"dateBirth\": \"2021-06-09T21:55:32.73\",\n        \"assigments\": [\n             {\n                \"id\": 5,\n                \"name\": \"Assigment 1\",\n                \"students\": []\n            }\n        ]\n    }"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:44388",
+                  "path": "/api/ManageStudent/5/Assigments"
+                },
+                "id": "c91fb508-3c58-436c-ba1a-dca608e4676f",
+                "name": " MANAGESTUDENTS/{ID}/ASSIGMENT",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "localhost:44388",
+              "path": "/api/Surveys/1"
+            },
+            "id": "3cb4cf8f-b63e-4f8f-9af8-039a6298a29f",
+            "name": "Request 2",
+            "headers": []
+          }
+        }
+      ]
+    }
+  ]
+}
