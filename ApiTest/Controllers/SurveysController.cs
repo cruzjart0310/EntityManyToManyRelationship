@@ -26,7 +26,8 @@ namespace ApiTest.Controllers
         {
             return await _context
                 .Survey
-                .Include(x => x.Questions).ThenInclude(x => x.Answer)
+                .Include(x => x.Questions)
+                .ThenInclude(x => x.Answers)
                 .AsNoTracking()
                 .ToListAsync();
         }
@@ -36,7 +37,7 @@ namespace ApiTest.Controllers
         public async Task<ActionResult<Survey>> GetSurvey(int id)
         {
             var survey = await _context.Survey
-                .Include(x => x.Questions).ThenInclude(x => x.Answer)
+                .Include(x => x.Questions).ThenInclude(x => x.Answers)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(x => x.Id==id);
 

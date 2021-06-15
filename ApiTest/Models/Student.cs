@@ -10,12 +10,11 @@ namespace ApiTest.Models
          public int Id { get; set; }
         public string Name { get; set; }
         public DateTime DateBirth { get; set; }
-
+        public Profile Profile { get; set; }
+        public ICollection<Address> Address { get; set; }
         //[NotMapped]
         public ICollection<Assigment> Assigments { get; set; }
 
-        public Profile Profile { get; set; }
-
-        public ICollection<Address> Address { get; set; }
+        public ICollection<Survey> Surveys { get; set; }
     }
 }

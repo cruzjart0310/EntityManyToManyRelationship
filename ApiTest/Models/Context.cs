@@ -31,7 +31,7 @@ namespace ApiTest.Models
 
         public DbSet<Survey> Survey { get; set; }
         public DbSet<Question> Question { get; set; }
-
+        public DbSet<Type> Type { get; set; }
         public DbSet<Answer> Answer { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -63,13 +63,16 @@ namespace ApiTest.Models
                     .WithMany().HasForeignKey(x => x.StudentId)
                 );
 
+            //modelBuilder.Entity<Question>()
+            //    .HasOne(a => a.Type);
+
             modelBuilder.Entity<Profile>();
             modelBuilder.Entity<Country>();
             modelBuilder.Entity<State>();
             modelBuilder.Entity<City>();
 
+            modelBuilder.Entity<Type>();
 
-            
 
             modelBuilder.Entity<Profile>().HasData(
                 new Profile { Id = 1, Nickname="nickname", Avatar="avatar.jpg"}

@@ -7,13 +7,17 @@ namespace ApiTest.Models
 {
     public class Question
     {
-        public Question()
-        {
-            Answer = new HashSet<Answer>();
-        }
-        public int Id { get; set; }
-        public String Title { get; set; }
+        //    public Question()
+        //    {
+        //        Answer = new HashSet<Answer>();
+        //    }
 
-        public ICollection<Answer> Answer { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public Type Type { get; set; }
+
+        public ICollection<Answer> Answers { get; set; }
+
+        
     }
 }
